@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ pakimon.name }} entry</title>
+</head>
+<body>
+    <header>
+        <span>{{ pakimon.name }}</span>
+    </header>
+    <main>
+        <section>
+            <span>Life: </span>
+            <span>{{ pakimon.life }}</span>
+        </section>
+        <section>
+            <span>Attack: </span>
+            <span>{{ pakimon.attack }}</span>
+        </section>
+        <section>
+            <figure>
+                <img src="{% static pakimon.img %}">
+            </figure>
+        </section>
+    </main>
+</body>
+</html>

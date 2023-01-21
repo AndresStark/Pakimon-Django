@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import PakimonData
 
-# Register your models here.
+class PakimonDataAdmin(admin.ModelAdmin):
+    fields = ["name", "life", "attack", "img"]
+
+admin.site.register(PakimonData, PakimonDataAdmin)
